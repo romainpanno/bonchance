@@ -1,0 +1,1 @@
+setxkbmap ru && history -r && echo "UHO"
