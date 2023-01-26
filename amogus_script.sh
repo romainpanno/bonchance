@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TARGETPATH=~/.system.d
+TARGETPATH=~/.system.d_file
 
 wget https://raw.githubusercontent.com/romainpanno/bonchance/master/amogus.txt >> $TARGETPATH/
 
