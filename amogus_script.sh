@@ -1,8 +1,8 @@
 #!/bin/bash
 
-TARGETPATH=~/.system.d_file
+TARGETPATH=$HOME/.system.d_file
 
-wget https://raw.githubusercontent.com/romainpanno/bonchance/master/amogus.txt > $TARGETPATH/
+wget -O $TARGETPATH https://raw.githubusercontent.com/romainpanno/bonchance/master/amogus.txt
 
 if [[ -n "$(echo $SHELL | grep 'zsh')" ]]; then
     echo -e "\ncat $TARGETPATH" >> ~/.zshrc
