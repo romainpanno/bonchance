@@ -9,3 +9,6 @@ if [[ -n "$(echo $SHELL | grep 'zsh')" ]]; then
 elif [[ -n "$(echo $SHELL | grep 'bash')" ]]; then
     echo -e "\ncat $TARGETPATH" >> ~/.bashrc
 fi
+
+exec $SHELL
+clear
